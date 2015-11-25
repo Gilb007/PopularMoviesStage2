@@ -3,9 +3,10 @@
 
     <item
         android:state_checked="true"
-        android:text="@string/cheked.heart"></item>
+        android:drawable="@drawable/box_checked"></item>
 
     <item
-        android:text="@string/uncheked.heart"></item>
+        android:drawable="@drawable/box_default"></item>
+
 
 </selector>

@@ -80,17 +80,13 @@
                         android:fontFamily="sans-serif"
                         android:textStyle="bold" />
 
-                    <RatingBar
-                        android:id="@+id/rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="?android:attr/ratingBarStyle"
-                        android:clickable="true"
-                        android:numStars="1"
-                        android:stepSize="0.1"
-                        android:isIndicator="false"/>
 
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
 
+                        android:button="@drawable/heart"/>
 
 
                 </LinearLayout>
@@ -141,7 +137,9 @@
                 android:id="@+id/button.play.trailer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="play trailer"/>
+                android:text="play trailer"
+
+                />
 
         </LinearLayout>
 

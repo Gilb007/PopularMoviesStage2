@@ -29,6 +29,9 @@ dependencies {
     compile 'com.squareup.retrofit:converter-gson:2.0.0-beta1'
     compile 'io.reactivex:rxandroid:1.0.1'
 
+    // for database usage
+    compile 'de.greenrobot:greendao:2.0.0'
+
 
 }
 
