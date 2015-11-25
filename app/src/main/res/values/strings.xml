@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PopularMoviesStage1</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- for menu -->
+    <string name="most_popular">most popular</string>
+    <string name="highest_rated">highest rated</string>
+
+
+
+
+</resources>
