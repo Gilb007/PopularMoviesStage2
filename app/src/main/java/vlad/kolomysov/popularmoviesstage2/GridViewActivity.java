@@ -1,10 +1,8 @@
-package vlad.kolomysov.popularmoviesstage1;
+package vlad.kolomysov.popularmoviesstage2;
 
 import android.content.Intent;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -250,6 +248,15 @@ public class GridViewActivity extends AppCompatActivity
                 mProgressBar.setVisibility(View.VISIBLE);
                 mGridAdapter.clear();
                 loadDataSortByHighestRated(Constants.highest_rated);
+                return true;
+
+            case R.id.action_favorite:
+
+                // Visible progress bar
+            /*    mProgressBar.setVisibility(View.VISIBLE);
+                mGridAdapter.clear();
+                loadDataSortByHighestRated(Constants.highest_rated);*/
+                // TODO: 25.11.15 - load favorite data 
                 return true;
 
             default:

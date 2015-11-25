@@ -1,4 +1,4 @@
-package vlad.kolomysov.popularmoviesstage1;
+package vlad.kolomysov.popularmoviesstage2;
 
 
 import java.util.List;

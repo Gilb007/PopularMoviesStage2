@@ -1,13 +1,15 @@
-package vlad.kolomysov.popularmoviesstage1;
+package vlad.kolomysov.popularmoviesstage2;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
-import android.text.Html;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -35,6 +37,8 @@ public class DetailsViewActivity extends Activity {
     private TextView mOverview;
     private TextView mVoteAverage;
     private TextView mReleaseDate;
+    private RatingBar mRatingBar;
+    private Button mButtonPlayTrailer;
 
 
     @Override
@@ -43,11 +47,17 @@ public class DetailsViewActivity extends Activity {
         setContentView(R.layout.activity_details_view);
 
 
+
+
         mTitle = (TextView) findViewById(R.id.original_title);
         mImage = (ImageView) findViewById(R.id.image_thumbnail);
         mOverview = (TextView) findViewById(R.id.overview);
         mVoteAverage = (TextView) findViewById(R.id.vote_average);
         mReleaseDate = (TextView) findViewById(R.id.release_date);
+        mRatingBar = (RatingBar) findViewById(R.id.rating);
+        mButtonPlayTrailer = (Button) findViewById(R.id.button_play_trailer);
+
+       // mRatingBar.setRating(1);
 
         Intent intent = getIntent();
 
@@ -69,6 +79,15 @@ public class DetailsViewActivity extends Activity {
         String releaseDate = intent.getStringExtra("release_date");
         mReleaseDate.setText("Release date:   "+releaseDate);
 
+
+        mButtonPlayTrailer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=Hxy8BZGQ5Jo")));
+                Log.i("Video", "Video Playing....");
+            }
+        });
 
     }
 

@@ -1,6 +1,4 @@
-package vlad.kolomysov.popularmoviesstage1;
-
-import java.util.List;
+package vlad.kolomysov.popularmoviesstage2;
 
 /**
  * Copyright (C) Created by Vlad Kolomysov on 30.09.15.

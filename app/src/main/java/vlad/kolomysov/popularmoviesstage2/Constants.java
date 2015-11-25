@@ -1,4 +1,4 @@
-package vlad.kolomysov.popularmoviesstage1;
+package vlad.kolomysov.popularmoviesstage2;
 
 /**
  * Copyright (C) Created by Vlad Kolomysov on 28.09.15.
