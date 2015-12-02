@@ -81,12 +81,11 @@
                         android:textStyle="bold" />
 
 
-                    <CheckBox
-                        android:id="@+id/checkbox"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-
-                        android:button="@drawable/heart"/>
+                   <Button
+                       android:id="@+id/heart.button"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:text="@string/cheked.heart"/>
 
 
                 </LinearLayout>
@@ -137,7 +136,7 @@
                 android:id="@+id/button.play.trailer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="play trailer"
+                android:text="@string/youtube.button"
 
                 />
 

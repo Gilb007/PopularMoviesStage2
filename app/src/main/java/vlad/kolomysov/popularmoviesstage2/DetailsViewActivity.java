@@ -2,6 +2,8 @@ package vlad.kolomysov.popularmoviesstage2;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -18,6 +20,8 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import javax.xml.validation.Schema;
 
 /**
  * Copyright (C) Created by Vlad Kolomysov on 29.09.15.
@@ -44,7 +48,7 @@ public class DetailsViewActivity extends Activity {
     private TextView mReleaseDate;
 
     private Button mButtonPlayTrailer;
-    private CheckBox mCheckBox;
+    private Button mHeartButton;
 
 
     @Override
@@ -52,15 +56,29 @@ public class DetailsViewActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_view);
 
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "font/fontawesome-webfont.ttf");
+
+
+
+        DatabaseHelper dbHelper = new DatabaseHelper(this);
+        final SQLiteDatabase sqdb = dbHelper.getWritableDatabase();
+
+
+
         mTitle = (TextView) findViewById(R.id.original_title);
         mImage = (ImageView) findViewById(R.id.image_thumbnail);
         mOverview = (TextView) findViewById(R.id.overview);
         mVoteAverage = (TextView) findViewById(R.id.vote_average);
         mReleaseDate = (TextView) findViewById(R.id.release_date);
-        mCheckBox = (CheckBox) findViewById(R.id.checkbox);
+     //   mCheckBox = (CheckBox) findViewById(R.id.checkbox);
+        mHeartButton = (Button) findViewById(R.id.heart_button);
+
         mButtonPlayTrailer = (Button) findViewById(R.id.button_play_trailer);
      //   mCheckBox = (Button) findViewById(R.id.heart_button);
 
+        mHeartButton.setTypeface(typeface);
+        mButtonPlayTrailer.setTypeface(typeface);
        // mRatingBar.setRating(1);
 
         Intent intent = getIntent();
@@ -93,12 +111,24 @@ public class DetailsViewActivity extends Activity {
             }
         });
 
-        mCheckBox.setOnClickListener(new View.OnClickListener() {
+   /*     mCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.v("checkbox","checkbox = "+mCheckBox.isChecked());
+
+                //Log.d("push", "count = " + getRequestsResponse.requests.size());
+                Cursor cursorPush = sqdb.query(DatabaseHelper.TABLE_PUSH, new String[]
+                                {
+                                        DatabaseHelper.BRANCH_ID},
+                        null, // The columns for the WHERE clause
+                        null, // The values for the WHERE clause
+                        null, // don't group the rows
+                        null, // don't filter by row groups
+                        null // The sort order
+                );
+
             }
-        });
+        });*/
 
 
 

@@ -11,8 +11,9 @@
     <string name="favorite">favorite</string>
 
    <!-- font awesome-->
-    <string name="cheked.heart">#xf004</string>
-    <string name="uncheked.heart">#xf08a</string>
+    <string name="cheked.heart">&#xf004;</string>
+    <string name="youtube.button">&#xf167;</string>
+
 
 
 
