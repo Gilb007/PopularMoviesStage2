@@ -74,6 +74,13 @@ public class DetailsViewActivity extends Activity {
      //   mCheckBox = (CheckBox) findViewById(R.id.checkbox);
         mHeartButton = (Button) findViewById(R.id.heart_button);
 
+        mHeartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         mButtonPlayTrailer = (Button) findViewById(R.id.button_play_trailer);
      //   mCheckBox = (Button) findViewById(R.id.heart_button);
 
