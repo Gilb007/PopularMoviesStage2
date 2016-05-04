@@ -15,8 +15,12 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
-import butterknife.Bind;
+//import butterknife.Bind;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 /**
  * Copyright (C) Created by Vlad Kolomysov on 29.09.15.
@@ -36,13 +40,17 @@ import butterknife.OnClick;
 
 public class DetailsViewActivity extends Activity {
 
-    @Bind(R.id.title) TextView mTitle;
-    @Bind(R.id.movie_poster) ImageView mMoviePoster;
-    @Bind(R.id.vote_average) TextView mVoteAverage;
-    @Bind(R.id.plot_synopsis) TextView mPlotSynopsis;
-    @Bind(R.id.release_date) TextView mReleaseDate;
-    @Bind(R.id.button_play_trailer) Button mButtonPlayTrailer;
-    @Bind(R.id.heart_button) Button mHeartButton;
+    @BindView(R.id.title) TextView mTitle;
+    @BindView(R.id.movie_poster) ImageView mMoviePoster;
+    @BindView(R.id.vote_average) TextView mVoteAverage;
+    @BindView(R.id.plot_synopsis) TextView mPlotSynopsis;
+    @BindView(R.id.release_date) TextView mReleaseDate;
+    @BindView(R.id.button_play_trailer) Button mButtonPlayTrailer;
+    @BindView(R.id.heart_button) Button mHeartButton;
+
+    Realm mFavouriteRealm;
+
+    private String mId;
 
 
     @Override
@@ -52,8 +60,17 @@ public class DetailsViewActivity extends Activity {
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/fontawesome-webfont.ttf");
 
-        DatabaseHelper dbHelper = new DatabaseHelper(this);
-        final SQLiteDatabase sqdb = dbHelper.getWritableDatabase();
+        ButterKnife.bind(this);
+
+       /* DatabaseHelper dbHelper = new DatabaseHelper(this);
+        final SQLiteDatabase sqdb = dbHelper.getWritableDatabase();*/
+
+         mFavouriteRealm =
+                Realm.getInstance(
+                        new RealmConfiguration.Builder(getApplicationContext())
+                                .name("favourite.realm")
+                                .build()
+                );
 
 
         mButtonPlayTrailer = (Button) findViewById(R.id.button_play_trailer);
@@ -83,15 +100,17 @@ public class DetailsViewActivity extends Activity {
         String releaseDate = intent.getStringExtra("release_date");
         mReleaseDate.setText("Release date:   " + releaseDate);
 
+        mId = intent.getStringExtra("id");
 
-        mButtonPlayTrailer.setOnClickListener(new View.OnClickListener() {
+
+       /* mButtonPlayTrailer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=Hxy8BZGQ5Jo")));
                 Log.i("Video", "Video Playing....");
             }
-        });
+        });*/
 
    /*     mCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,13 +131,30 @@ public class DetailsViewActivity extends Activity {
         });*/
     }
 
-    @OnClick(R.id.heart_button) void heartButton(){
+    // click on Heart Button to add favourite film
+    @OnClick(R.id.heart_button)
+    public void heartButton(){
         Toast.makeText(getApplicationContext(),"HEART",Toast.LENGTH_SHORT);
+
+        mFavouriteRealm.beginTransaction();
+
+        FavouriteFilm  favouriteFilm = mFavouriteRealm.createObject(FavouriteFilm.class);
+
+        // Set its fields
+        favouriteFilm.setmId(mId);
+
+        mFavouriteRealm.commitTransaction();
+
+        Log.i("click", "i clickHearButton....");
+
+        Log.d("click","d clickHearButton");
     }
 
-    @OnClick(R.id.button_play_trailer) void buttonPlayButton(){
+    @OnClick(R.id.button_play_trailer)
+    public void buttonPlayButton(){
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=Hxy8BZGQ5Jo")));
-        Log.i("Video", "Video Playing....");
+        Log.i("click", "i Video Playing....");
+        Log.d("click","d clickPlayTrailer");
     }
 
     @Override

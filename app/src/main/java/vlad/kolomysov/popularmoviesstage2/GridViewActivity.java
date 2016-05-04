@@ -77,6 +77,7 @@ public class GridViewActivity extends AppCompatActivity
                 mIntent.putExtra( "overview",mListFilm.get(position).overview);
                 mIntent.putExtra( "vote_average",mListFilm.get(position).vote_average);
                 mIntent.putExtra( "release_date",mListFilm.get(position).release_date);
+                mIntent.putExtra("id",mListFilm.get(position).id);
 //                original title
 //                movie poster image thumbnail
 //                A plot synopsis (called overview in the api)
