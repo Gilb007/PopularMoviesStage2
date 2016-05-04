@@ -2,26 +2,21 @@ package vlad.kolomysov.popularmoviesstage2;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
-import javax.xml.validation.Schema;
+import butterknife.Bind;
+import butterknife.OnClick;
 
 /**
  * Copyright (C) Created by Vlad Kolomysov on 29.09.15.
@@ -41,14 +36,13 @@ import javax.xml.validation.Schema;
 
 public class DetailsViewActivity extends Activity {
 
-    private TextView mTitle;
-    private ImageView mImage;
-    private TextView mOverview;
-    private TextView mVoteAverage;
-    private TextView mReleaseDate;
-
-    private Button mButtonPlayTrailer;
-    private Button mHeartButton;
+    @Bind(R.id.title) TextView mTitle;
+    @Bind(R.id.movie_poster) ImageView mMoviePoster;
+    @Bind(R.id.vote_average) TextView mVoteAverage;
+    @Bind(R.id.plot_synopsis) TextView mPlotSynopsis;
+    @Bind(R.id.release_date) TextView mReleaseDate;
+    @Bind(R.id.button_play_trailer) Button mButtonPlayTrailer;
+    @Bind(R.id.heart_button) Button mHeartButton;
 
 
     @Override
@@ -56,30 +50,11 @@ public class DetailsViewActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_view);
 
-
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "font/fontawesome-webfont.ttf");
-
-
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/fontawesome-webfont.ttf");
 
         DatabaseHelper dbHelper = new DatabaseHelper(this);
         final SQLiteDatabase sqdb = dbHelper.getWritableDatabase();
 
-
-
-        mTitle = (TextView) findViewById(R.id.original_title);
-        mImage = (ImageView) findViewById(R.id.image_thumbnail);
-        mOverview = (TextView) findViewById(R.id.overview);
-        mVoteAverage = (TextView) findViewById(R.id.vote_average);
-        mReleaseDate = (TextView) findViewById(R.id.release_date);
-     //   mCheckBox = (CheckBox) findViewById(R.id.checkbox);
-        mHeartButton = (Button) findViewById(R.id.heart_button);
-
-        mHeartButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         mButtonPlayTrailer = (Button) findViewById(R.id.button_play_trailer);
      //   mCheckBox = (Button) findViewById(R.id.heart_button);
@@ -97,10 +72,10 @@ public class DetailsViewActivity extends Activity {
         mTitle.setText(title);
 
         String image = intent.getStringExtra("poster_path");
-        Picasso.with(this).load("http://image.tmdb.org/t/p/w342/" + image).into(mImage);
+        Picasso.with(this).load("http://image.tmdb.org/t/p/w342/" + image).into(mMoviePoster);
 
         String overview = intent.getStringExtra("overview");
-        mOverview.setText("Overview: " + overview);
+        mPlotSynopsis.setText("Overview: " + overview);
 
         String voteAverage = intent.getStringExtra("vote_average");
         mVoteAverage.setText("Average vote:   " + voteAverage);
@@ -125,21 +100,30 @@ public class DetailsViewActivity extends Activity {
 
                 //Log.d("push", "count = " + getRequestsResponse.requests.size());
                 Cursor cursorPush = sqdb.query(DatabaseHelper.TABLE_PUSH, new String[]
-                                {
-                                        DatabaseHelper.BRANCH_ID},
+                        {
+                        DatabaseHelper.BRANCH_ID},
                         null, // The columns for the WHERE clause
                         null, // The values for the WHERE clause
                         null, // don't group the rows
                         null, // don't filter by row groups
                         null // The sort order
                 );
-
             }
         });*/
-
-
-
     }
 
+    @OnClick(R.id.heart_button) void heartButton(){
+        Toast.makeText(getApplicationContext(),"HEART",Toast.LENGTH_SHORT);
+    }
 
+    @OnClick(R.id.button_play_trailer) void buttonPlayButton(){
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=Hxy8BZGQ5Jo")));
+        Log.i("Video", "Video Playing....");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
+    }
 }

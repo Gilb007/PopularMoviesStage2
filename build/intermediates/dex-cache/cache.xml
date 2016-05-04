@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/de.greenrobot/greendao/2.0.0/5f49dd477c1621dfaf0f7fe5d755fe4f07526af2/greendao-2.0.0.jar"
-        jumboMode="false"
+        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="true"
         revision="23.0.0"
-        sha1="5f49dd477c1621dfaf0f7fe5d755fe4f07526af2">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/greendao-2.0.0-0074ed9f38a797c28b31671106ee4218876fe3e0.jar" />
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_69b028994c1e25e4fd7118d2092dfdbfc4c51814.jar" />
     </item>
 
 </items>

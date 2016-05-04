@@ -32,6 +32,9 @@ dependencies {
     // for database usage
     compile 'de.greenrobot:greendao:2.0.0'
 
+    // butterknife
+    compile 'com.jakewharton:butterknife:7.0.1'
+
 
 }
 
