@@ -64,7 +64,7 @@ public class GridViewActivity extends AppCompatActivity
         mTheMovieDBService = retrofit.create(TheMovieDBService.class);
 
 
-        mIntent = new Intent(GridViewActivity.this, DetailsViewActivity.class);
+        mIntent = new Intent(GridViewActivity.this, DetailsActivity.class);
 
         // listener for clicking in item from grid
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

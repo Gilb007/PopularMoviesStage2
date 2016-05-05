@@ -40,7 +40,7 @@ dependencies {
     compile 'de.greenrobot:greendao:2.0.0'
 
     // butterknife
-    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
 
     // realm libs for database
     compile 'io.realm:realm-android:0.84.1'

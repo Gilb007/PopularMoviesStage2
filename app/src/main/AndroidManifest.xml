@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="vlad.kolomysov.popularmoviesstage2.DetailsViewActivity" />
+        <activity android:name="vlad.kolomysov.popularmoviesstage2.DetailsActivity" />
 
     </application>
 
