@@ -48,6 +48,11 @@ public class DetailsFragment extends Fragment {
     Realm mFavouriteRealm;
 
     private String mId;
+    private String mPosterPath;
+    private String mOriginalTitle;
+    private String mOverview;
+    private String mReleaseDate2;
+    private String mVoteAverage2;
 
     @Nullable
     @Override
@@ -87,8 +92,8 @@ public class DetailsFragment extends Fragment {
     // Step 1 - get data that were passed throuh intent in GridViewActivity
     // Step 2 - set learned data to UI elements detail activity
 
-    //String title = intent.getStringExtra("original_title");
-        mTitle.setText("лалалалалла");
+    String title = intent.getStringExtra("original_title");
+        mTitle.setText(title);
 
     String image = intent.getStringExtra("poster_path");
     Picasso.with(getActivity()).load("http://image.tmdb.org/t/p/w342/" +image).into(mMoviePoster);
@@ -102,7 +107,12 @@ public class DetailsFragment extends Fragment {
     String releaseDate = intent.getStringExtra("release_date");
     mReleaseDate.setText("Release date:   " + releaseDate);
 
-    mId = intent.getStringExtra("id");
+        mId = intent.getStringExtra("id");
+        mPosterPath = intent.getStringExtra("poster_path");
+        mOriginalTitle = intent.getStringExtra("original_title");
+        mOverview = intent.getStringExtra("overview");
+        mReleaseDate2 = intent.getStringExtra("release_date");
+        mVoteAverage2 = intent.getStringExtra("vote_average");
 
 
        /* mButtonPlayTrailer.setOnClickListener(new View.OnClickListener() {
@@ -146,6 +156,18 @@ public class DetailsFragment extends Fragment {
 
         // Set its fields
         favouriteFilm.setmId(mId);
+        favouriteFilm.setmPosterPath(mPosterPath);
+        favouriteFilm.setmOriginalTitle(mOriginalTitle);
+        favouriteFilm.setmOverview(mOverview);
+        favouriteFilm.setmReleaseDate(mReleaseDate2);
+        favouriteFilm.setmVoteAverage(mVoteAverage2);
+
+        Log.i("click", mId);
+        Log.i("click", mPosterPath);
+        Log.i("click", mOriginalTitle);
+        Log.i("click", mOverview);
+        Log.i("click", mReleaseDate2);
+        Log.i("click", mVoteAverage2);
 
         mFavouriteRealm.commitTransaction();
 
@@ -153,7 +175,6 @@ public class DetailsFragment extends Fragment {
 
         Log.d("click","d clickHearButton");
     }
-
 
     // click play button
     @OnClick(R.id.button_play_trailer)

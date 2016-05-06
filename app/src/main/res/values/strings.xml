@@ -9,6 +9,7 @@
     <string name="most_popular">most popular</string>
     <string name="highest_rated">highest rated</string>
     <string name="favorite">favorite</string>
+    <string name="clear_db">crear_db</string>
 
    <!-- font awesome-->
     <string name="cheked.heart">&#xf004;</string>

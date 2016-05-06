@@ -15,9 +15,11 @@ public class Constants
 
     public static final String SERVICE_ENDPOINT = "https://api.themoviedb.org/3/";
 
-    public static final String most_popular = "popularity.desc";
+    public static final String MOST_POPULAR = "popularity.desc";
 
-    public static final String highest_rated = "vote_average.desc";
+    public static final String HIGHEST_RATED = "vote_average.desc";
+
+   // public static final String highest_rated = "vote_average.desc";
 
 
 }

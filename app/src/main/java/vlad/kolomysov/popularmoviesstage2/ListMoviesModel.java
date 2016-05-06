@@ -1,6 +1,7 @@
 package vlad.kolomysov.popularmoviesstage2;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +13,7 @@ import java.util.List;
 public class ListMoviesModel
 {
     String page;
-    List<Film> results;
+    ArrayList<Film> results;
     String total_pages;
     String total_results;
 }

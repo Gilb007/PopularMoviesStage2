@@ -3,6 +3,7 @@ package vlad.kolomysov.popularmoviesstage2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,8 +12,12 @@ import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+import io.realm.RealmResults;
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
@@ -37,19 +42,31 @@ public class GridViewActivity extends AppCompatActivity
     private ProgressBar mProgressBar;
     private GridViewAdapter mGridAdapter;
 
-    List<Film> mListFilm;
+    ArrayList<Film> mListFilm = new ArrayList<>();
 
     TheMovieDBService mTheMovieDBService;
 
     Intent mIntent;
+
+    Realm mFavouriteRealm;
+
+    RealmResults<FavouriteFilm> results;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid_view);
 
+        //mRealm = Realm.getDefaultInstance();
+        mFavouriteRealm =
+                Realm.getInstance(new RealmConfiguration
+                        .Builder(this)
+                        .deleteRealmIfMigrationNeeded()
+                        .build());
 
         mGridView = (GridView) findViewById(R.id.gridView);
+        mIntent = new Intent(this,DetailsActivity.class);
+
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         mProgressBar.setVisibility(View.VISIBLE);
 
@@ -63,21 +80,19 @@ public class GridViewActivity extends AppCompatActivity
         //Create an implementation of the API defined by the service interface.
         mTheMovieDBService = retrofit.create(TheMovieDBService.class);
 
-
-        mIntent = new Intent(GridViewActivity.this, DetailsActivity.class);
-
         // listener for clicking in item from grid
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 // customize intent for passing data to details activity
-                mIntent.putExtra( "original_title",mListFilm.get(position).original_title);
-                mIntent.putExtra( "poster_path",mListFilm.get(position).poster_path);
-                mIntent.putExtra( "overview",mListFilm.get(position).overview);
-                mIntent.putExtra( "vote_average",mListFilm.get(position).vote_average);
-                mIntent.putExtra( "release_date",mListFilm.get(position).release_date);
                 mIntent.putExtra("id",mListFilm.get(position).id);
+                mIntent.putExtra( "poster_path",mListFilm.get(position).poster_path);
+                mIntent.putExtra( "original_title",mListFilm.get(position).original_title);
+                mIntent.putExtra( "overview",mListFilm.get(position).overview);
+                mIntent.putExtra( "release_date",mListFilm.get(position).release_date);
+                mIntent.putExtra( "vote_average",mListFilm.get(position).vote_average);
+
 //                original title
 //                movie poster image thumbnail
 //                A plot synopsis (called overview in the api)
@@ -227,8 +242,8 @@ public class GridViewActivity extends AppCompatActivity
 
     // for selected item menu
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the most popular and highest rated button
         int id = item.getItemId();
@@ -240,7 +255,7 @@ public class GridViewActivity extends AppCompatActivity
 
                 // Visible progress bar
                 mProgressBar.setVisibility(View.VISIBLE);
-                loadDataSortByMostPopular(Constants.most_popular);
+                loadDataSortByMostPopular(Constants.MOST_POPULAR);
                 return true;
 
             case R.id.action_highest_rated:
@@ -248,7 +263,7 @@ public class GridViewActivity extends AppCompatActivity
                 // Visible progress bar
                 mProgressBar.setVisibility(View.VISIBLE);
                 mGridAdapter.clear();
-                loadDataSortByHighestRated(Constants.highest_rated);
+                loadDataSortByHighestRated(Constants.HIGHEST_RATED);
                 return true;
 
             case R.id.action_favorite:
@@ -257,8 +272,66 @@ public class GridViewActivity extends AppCompatActivity
             /*    mProgressBar.setVisibility(View.VISIBLE);
                 mGridAdapter.clear();
                 loadDataSortByHighestRated(Constants.highest_rated);*/
-                // TODO: 25.11.15 - load favorite data 
+                // TODO: 25.11.15 - load favorite data
+                mProgressBar.setVisibility(View.VISIBLE);
+                mGridAdapter.clear();
+                results = mFavouriteRealm.where(FavouriteFilm.class).findAll();
+                Log.d("click",results.toString());
+                Log.d("click","size = "+results.size());
+
+                if (results.size() !=0){
+                    for (int i = 0; i < results.size(); i++) {
+
+                        FavouriteFilm u = results.get(i);
+                        Film u2 = new Film();
+
+                        u2.setId(u.getmId());
+                        u2.setOriginal_title(u.getmOriginalTitle());
+                        u2.setOverview(u.getmOverview());
+                        u2.setPoster_path(u.getmPosterPath());
+                        u2.setRelease_date(u.getmReleaseDate());
+                        u2.setVote_average(u.getmVoteAverage());
+
+                        Log.i("click", u.getmId());
+                        Log.i("click", u.getmPosterPath());
+                        Log.i("click", u.getmOriginalTitle());
+                        Log.i("click", u.getmOverview());
+                        Log.i("click", u.getmReleaseDate());
+                        Log.i("click", u.getmVoteAverage());
+
+                        // ... do something with the object ...
+                        Log.d("click","i = "+i);
+                        //mListFilm.set(i,u2);
+                        mListFilm.add(u2);
+
+                    }
+                    // clear adapter filled in previous step
+                    mGridAdapter.clear();
+                    // listMoviesModel contain result from IMDB server
+                    //mListFilm = listMoviesModel.results; // save list of movies
+                    // initilaze adapter
+
+                    mGridAdapter = new GridViewAdapter(GridViewActivity.this, R.layout.row_grid, mListFilm);
+                    // set adapter
+                    mGridView.setAdapter(mGridAdapter);
+
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"В базе данных ничего нет!",Toast.LENGTH_SHORT);
+                }
+
                 return true;
+
+            case R.id.clear_db:
+               /* Realm realm = Realm.getInstance(getApplicationContext());
+                realm.where(FavouriteFilm.class).findAll().clear();*/
+                mFavouriteRealm.beginTransaction();
+                //trip.removeFromRealm();
+                mFavouriteRealm.where(FavouriteFilm.class).findAll().clear();
+                mFavouriteRealm.commitTransaction();
+
+                return true;
+
 
             default:
                 return super.onOptionsItemSelected(item);

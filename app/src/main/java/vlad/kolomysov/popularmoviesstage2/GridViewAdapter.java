@@ -50,14 +50,15 @@ public class GridViewAdapter extends ArrayAdapter<Film> {
             holder = new ViewHolder();
             holder.imageView = (ImageView) row.findViewById(R.id.grid_item_image);
             row.setTag(holder);
-        } else {
+        } else
+        {
             holder = (ViewHolder) row.getTag();
         }
 
         Film item = mListFilm.get(position);
 
 // Use Picasso for loading image
-        Picasso.with(mContext).load("http://image.tmdb.org/t/p/w342/"+item.getPosterpath()).into(holder.imageView);
+        Picasso.with(mContext).load("http://image.tmdb.org/t/p/w342/"+item.getPoster_path()).into(holder.imageView);
 
         return row;
     }
