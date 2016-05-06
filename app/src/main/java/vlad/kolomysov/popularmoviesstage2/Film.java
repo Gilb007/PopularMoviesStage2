@@ -24,6 +24,10 @@ public class Film
     //String vote_count;
 
 
+    public Film() {
+
+    }
+
     public String getId() {
         return id;
     }

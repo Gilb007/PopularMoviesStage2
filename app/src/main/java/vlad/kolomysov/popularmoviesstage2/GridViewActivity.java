@@ -42,7 +42,7 @@ public class GridViewActivity extends AppCompatActivity
     private ProgressBar mProgressBar;
     private GridViewAdapter mGridAdapter;
 
-    ArrayList<Film> mListFilm = new ArrayList<>();
+    ArrayList<Film> mListFilm = new ArrayList<Film>();
 
     TheMovieDBService mTheMovieDBService;
 
@@ -279,8 +279,13 @@ public class GridViewActivity extends AppCompatActivity
                 Log.d("click",results.toString());
                 Log.d("click","size = "+results.size());
 
+                mListFilm.clear();
+
+                Log.i("click","1 - mListFilm size = "+mListFilm.size());
+
                 if (results.size() !=0){
-                    for (int i = 0; i < results.size(); i++) {
+                    for (int i = 0; i < results.size(); i++)
+                    {
 
                         FavouriteFilm u = results.get(i);
                         Film u2 = new Film();
@@ -301,12 +306,18 @@ public class GridViewActivity extends AppCompatActivity
 
                         // ... do something with the object ...
                         Log.d("click","i = "+i);
+                        Log.d("click","u2.getOriginal_title() = "+u2.getOriginal_title());
+
                         //mListFilm.set(i,u2);
-                        mListFilm.add(u2);
+
+                        mListFilm.add(i,u2);
 
                     }
+
                     // clear adapter filled in previous step
                     mGridAdapter.clear();
+                    Log.i("click","2 - mListFilm size = "+mListFilm.size());
+                    Log.i("click","mListFilm size = "+mListFilm.toString());
                     // listMoviesModel contain result from IMDB server
                     //mListFilm = listMoviesModel.results; // save list of movies
                     // initilaze adapter
