@@ -52,6 +52,8 @@ public class GridViewActivity extends AppCompatActivity
 
     RealmResults<FavouriteFilm> results;
 
+    public final String TAG = "10May";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -279,7 +281,7 @@ public class GridViewActivity extends AppCompatActivity
                 Log.d("click",results.toString());
                 Log.d("click","size = "+results.size());
 
-                mListFilm.clear();
+                //mListFilm.clear();
 
                 Log.i("click","1 - mListFilm size = "+mListFilm.size());
 
@@ -288,36 +290,43 @@ public class GridViewActivity extends AppCompatActivity
                     {
 
                         FavouriteFilm u = results.get(i);
-                        Film u2 = new Film();
+                        Film u2 = new Film(u.getmId(),u.getmOriginalTitle(),u.getmOverview(),u.getmPosterPath(),u.getmReleaseDate(),u.getmVoteAverage());
 
-                        u2.setId(u.getmId());
+                       /* u2.setId(u.getmId());
                         u2.setOriginal_title(u.getmOriginalTitle());
                         u2.setOverview(u.getmOverview());
                         u2.setPoster_path(u.getmPosterPath());
                         u2.setRelease_date(u.getmReleaseDate());
-                        u2.setVote_average(u.getmVoteAverage());
+                        u2.setVote_average(u.getmVoteAverage());*/
 
-                        Log.i("click", u.getmId());
+                   /*     Log.i("click", u.getmId());
                         Log.i("click", u.getmPosterPath());
                         Log.i("click", u.getmOriginalTitle());
                         Log.i("click", u.getmOverview());
                         Log.i("click", u.getmReleaseDate());
-                        Log.i("click", u.getmVoteAverage());
-
+                        Log.i("click", u.getmVoteAverage());*/
                         // ... do something with the object ...
-                        Log.d("click","i = "+i);
+
+                      /*  Log.d("click","i = "+i);
                         Log.d("click","u2.getOriginal_title() = "+u2.getOriginal_title());
+                        Log.d("click","u2.getPoster_path() = "+u2.getPoster_path());
+                        Log.d("click","u2.getId() = "+u2.getId());
+                        Log.d("click","u2.getOverview() = "+u2.getOverview());
+                        Log.d("click","u2.getRelease_date() = "+u2.getRelease_date());
+                        Log.d("click","u2.getVote_average() = "+u2.getVote_average());*/
 
                         //mListFilm.set(i,u2);
 
-                        mListFilm.add(i,u2);
+                        mListFilm.add(u2);
+                        Log.d("click","mListFilm.size() = "+mListFilm.size());
 
                     }
 
+                    Log.d("click","mListFilm.size() 1 = "+mListFilm.size());
                     // clear adapter filled in previous step
-                    mGridAdapter.clear();
-                    Log.i("click","2 - mListFilm size = "+mListFilm.size());
-                    Log.i("click","mListFilm size = "+mListFilm.toString());
+                    //mGridAdapter.clear();
+                    Log.d("click","mListFilm.size() 2 = "+mListFilm.size());
+                    //Log.i("click","mListFilm size = "+mListFilm.toString());
                     // listMoviesModel contain result from IMDB server
                     //mListFilm = listMoviesModel.results; // save list of movies
                     // initilaze adapter

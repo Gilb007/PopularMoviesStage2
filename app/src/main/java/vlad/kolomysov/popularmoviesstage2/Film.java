@@ -28,6 +28,15 @@ public class Film
 
     }
 
+    public Film(String id, String original_title, String overview, String poster_path, String release_date, String vote_average) {
+        this.id = id;
+        this.original_title = original_title;
+        this.overview = overview;
+        this.poster_path = poster_path;
+        this.release_date = release_date;
+        this.vote_average = vote_average;
+    }
+
     public String getId() {
         return id;
     }
