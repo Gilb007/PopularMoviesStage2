@@ -83,8 +83,8 @@ public class DetailsFragment extends Fragment {
     mButtonPlayTrailer = (Button) view.findViewById(R.id.button_play_trailer);
     //   mCheckBox = (Button) findViewById(R.id.heart_button);
 
-  //  mHeartButton.setTypeface(typeface);
- //   mButtonPlayTrailer.setTypeface(typeface);
+    mHeartButton.setTypeface(typeface);
+    mButtonPlayTrailer.setTypeface(typeface);
     // mRatingBar.setRating(1);
 
     Intent intent = getActivity().getIntent();
