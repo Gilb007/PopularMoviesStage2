@@ -36,7 +36,7 @@
 
         <fragment
             android:id="@+id/fragment_popularmovies"
-            android:name="udacity.popular_movies.fragment.PopularMoviesFragment"
+            android:name="vlad.kolomysov.popularmoviesstage2.fragment.PopularMoviesFragment"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"

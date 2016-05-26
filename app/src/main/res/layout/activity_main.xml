@@ -31,7 +31,7 @@
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_popularmovies"
-    android:name="udacity.popular_movies.fragment.PopularMoviesFragment"
+    android:name="vlad.kolomysov.popularmoviesstage2.fragment.PopularMoviesFragment"
     android:layout_width="match_parent"
     android:layout_height="0dp"
     android:layout_weight="1"
