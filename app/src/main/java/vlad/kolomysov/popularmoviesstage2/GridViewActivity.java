@@ -119,7 +119,6 @@ public class GridViewActivity extends AppCompatActivity
     // safethreading, handling error, fast and reliable
     public void loadData(String page)
     {
-
         mTheMovieDBService.getListFilm(Constants.API_KEY_TMDB, page)
                 .subscribeOn(Schedulers.newThread()) // downloading in background thread
                 .observeOn(AndroidSchedulers.mainThread()) // results was passed to main thred for updating gridview
@@ -128,18 +127,14 @@ public class GridViewActivity extends AppCompatActivity
                     public void onCompleted() {
                         // after complete loading data GONE progress bar
                         mProgressBar.setVisibility(View.GONE);
-
                     }
-
                     @Override
                     public void onError(Throwable e) {
                         // if error occur - handle it
                         // if error GONE progress bar
                         mProgressBar.setVisibility(View.GONE);
                         Toast.makeText(GridViewActivity.this, "Error occur, please load again!", Toast.LENGTH_SHORT).show();
-
                     }
-
                     @Override
                     public void onNext(ListMoviesModel listMoviesModel) {
                         // listMoviesModel contain result from IMDB server
@@ -231,8 +226,6 @@ public class GridViewActivity extends AppCompatActivity
                 });
     }
 
-
-
     // create menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -240,7 +233,6 @@ public class GridViewActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
 
     // for selected item menu
     @Override
