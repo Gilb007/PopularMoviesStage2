@@ -34,7 +34,6 @@ import rx.schedulers.Schedulers;
 public class GridViewActivity extends AppCompatActivity
 {
 
-
     //condition that there must be equal to or more than 50 votes (to eliminate movies with only 1 vote)
     public static final String VOTE_COUNT_GTE = "500";
 
@@ -60,8 +59,7 @@ public class GridViewActivity extends AppCompatActivity
         setContentView(R.layout.activity_grid_view);
 
         //mRealm = Realm.getDefaultInstance();
-        mFavouriteRealm =
-                Realm.getInstance(new RealmConfiguration
+        mFavouriteRealm = Realm.getInstance(new RealmConfiguration
                         .Builder(this)
                         .deleteRealmIfMigrationNeeded()
                         .build());

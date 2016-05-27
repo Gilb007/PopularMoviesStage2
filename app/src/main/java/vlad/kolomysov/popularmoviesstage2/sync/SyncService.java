@@ -40,18 +40,18 @@ public class SyncService {
     boolean mLoading;
     private static  Realm realm;
 
-    private static SyncService mService;
+    private static SyncService sService;
 
     public static void initialize(){
 
-        if(mService!=null){
+        if(sService!=null){
             return;
         }
 
         realm = Realm.getInstance(PopularMovieApplication.mContext);
 
-        mService= new SyncService();
-        EventBus.getDefault().register(mService);
+        sService= new SyncService();
+        EventBus.getDefault().register(sService);
         Logger.log(TAG, "Initialize");
     }
 
