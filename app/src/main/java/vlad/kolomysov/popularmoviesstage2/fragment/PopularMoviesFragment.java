@@ -103,14 +103,10 @@ public class PopularMoviesFragment extends Fragment implements AdapterView.OnIte
         initViews(view);
 
         setRetainInstance(true);
-        if(savedInstanceState!=null){
-
+        if(savedInstanceState!=null)
+        {
             mPage= savedInstanceState.getInt(CURRENT_PAGE,1);
         }
-
-
-
-
 
         return view;
     }
@@ -302,7 +298,5 @@ public class PopularMoviesFragment extends Fragment implements AdapterView.OnIte
         public void onFragmentInteraction(Uri uri);
         public void onPosterClick(String id);
     }
-
-
 
 }

@@ -444,7 +444,6 @@ public class MovieDetailFragment extends Fragment implements View.OnClickListene
     @Override
     public void onClick(View v) {
 
-
         switch (v.getId()){
 
             case R.id.iv_back_icon:
@@ -457,11 +456,10 @@ public class MovieDetailFragment extends Fragment implements View.OnClickListene
             case R.id.trailer_item:
                 handleTrailerAction(v);
         }
+
     }
 
     private void handleTrailerAction(View v) {
-
-
         int pos= (int) v.getTag();
 
         String id=mTrailerResult.get(pos).getKey();
@@ -472,7 +470,6 @@ public class MovieDetailFragment extends Fragment implements View.OnClickListene
     }
 
     public void setTwoSpan(boolean b) {
-
         mTwospan= b;
     }
 }
