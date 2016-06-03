@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements PopularMoviesFrag
 
     public static String TAG= MainActivity.class.getSimpleName();
 
-    String mSortBy;
+    String mSortBy = null;
     private PopupMenu mMenu;
 
     boolean mTwoPane;
@@ -160,11 +160,10 @@ public class MainActivity extends AppCompatActivity implements PopularMoviesFrag
 
 
         if(mSortBy==null){
-
             mSortBy= AppUtils.getSortByOption();
         }
-        else if(!mSortBy.equals(AppUtils.getSortByOption())){
-
+        else if(!mSortBy.equals(AppUtils.getSortByOption()))
+        {
             mSortBy= AppUtils.getSortByOption();
             PopularMoviesFragment fragment= (PopularMoviesFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_popularmovies);
             fragment.refreshData();

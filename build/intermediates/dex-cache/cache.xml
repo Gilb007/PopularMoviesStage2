@@ -2,158 +2,158 @@
 <items version="2" >
 
     <item
+        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.4/3cc424c6eda381bf4aee40dc3ccdecc27b2106aa/rxjava-1.1.4.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="3cc424c6eda381bf4aee40dc3ccdecc27b2106aa">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/rxjava-1.1.4_ae3719858171bdabb1d94b7c937b32fcfbe19bb6.jar" />
+    </item>
+    <item
+        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="a8758fd02d7d283f9788d8e2d9ff13bfbed14318">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/instant-run_f45709ba8a10c1db451acaf94b01e963734a8dc1.jar" />
+    </item>
+    <item
         jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/converter-gson/2.0.0-beta2/392c3d09e0f5e7087544093cc0cb23bb9c7af5fa/converter-gson-2.0.0-beta2.jar"
         jumboMode="true"
         revision="23.0.0"
         sha1="392c3d09e0f5e7087544093cc0cb23bb9c7af5fa">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.0-beta2_25d365f11d97df2f574398c609752b71d29abdd9/classes.dex" />
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta2_25d365f11d97df2f574398c609752b71d29abdd9.jar" />
     </item>
     <item
         jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
         jumboMode="true"
         revision="23.0.0"
         sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_94e1ff8ab73bdc8083f60fdd096154f52e9661ab/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_e7ea35856d94c7e01c5a6cb92411c4315a4bf7a3/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="2e85d3e1d72e3adf960ec995f8eaabefd9b31769">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5af9de149952b7cf787b8eb242e0550a3e03ec0f/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.2_105a7d6159a751d6b495b7d69cb58adee6aa9a45/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/de.greenrobot/greendao/2.0.0/5f49dd477c1621dfaf0f7fe5d755fe4f07526af2/greendao-2.0.0.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="5f49dd477c1621dfaf0f7fe5d755fe4f07526af2">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/greendao-2.0.0_0074ed9f38a797c28b31671106ee4218876fe3e0/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/2.0.0-beta2/880d9e0997b2d1bfc98e0d121ced33ee5d04aac4/retrofit-2.0.0-beta2.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.0.0-beta2_136c30f107495beb57e5c54c88062482be43c8a8/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.1_b9ab5c58e8fd37845150840b2337278016c8a363/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="927e8ef5711b115b65b2f35495d77352be2b3c09">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/io.reactivex-rxandroid-1.2.0_059c7bcb4226ab8284ab4cdef683f57f33a704f9/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/adapter-rxjava/2.0.0-beta2/3a233746381a03dbb0f5f3ed10b11c3e72dba499/adapter-rxjava-2.0.0-beta2.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="3a233746381a03dbb0f5f3ed10b11c3e72dba499">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/adapter-rxjava-2.0.0-beta2_8f3fc03b6fe9dc0614dba80f14e7cb3c6caa7038/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.1_3f11028a4481d5d5734db82a945c4d9ecd7c85e1/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.1.1_5eecba5ca35caf4ab47b32fd838bd38a73358132/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.5.0/4de2b4ed3445c37ec1720a7d214712e845a24636/okhttp-2.5.0.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-2.5.0_9e1c80bb9f87ef131fe885e6bac34a8a7f606887/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.4/3cc424c6eda381bf4aee40dc3ccdecc27b2106aa/rxjava-1.1.4.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="3cc424c6eda381bf4aee40dc3ccdecc27b2106aa">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.4_ae3719858171bdabb1d94b7c937b32fcfbe19bb6/classes.dex" />
-    </item>
-    <item
-        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        revision="23.0.0"
-        sha1="ca4d0d2c001c18ffa70ae6f9ef57c077f67093cf">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f45709ba8a10c1db451acaf94b01e963734a8dc1/classes.dex" />
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/okio-1.6.0_94e1ff8ab73bdc8083f60fdd096154f52e9661ab.jar" />
     </item>
     <item
         jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
         jumboMode="true"
         revision="23.0.0"
         sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.4_32e2c505598b71282ef679af9d1abed92210ecc8/classes.dex" />
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/gson-2.4_32e2c505598b71282ef679af9d1abed92210ecc8.jar" />
+    </item>
+    <item
+        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_e7ea35856d94c7e01c5a6cb92411c4315a4bf7a3.jar" />
+    </item>
+    <item
+        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/43eeae0b9fb087bb3194ba59ab63a38a32fbf3e/retrofit-2.0.2.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="043eeae0b9fb087bb3194ba59ab63a38a32fbf3e">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/retrofit-2.0.2_105a7d6159a751d6b495b7d69cb58adee6aa9a45.jar" />
+    </item>
+    <item
+        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="0ac8fbec6bb1bc365c61a518c6dda10c246f2606">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_5af9de149952b7cf787b8eb242e0550a3e03ec0f.jar" />
     </item>
     <item
         jar="/Users/admin/.gradle/caches/modules-2/files-2.1/org.greenrobot/eventbus/3.0.0/ddd99896e9569eaababbe81b35d80e1b91c4ad85/eventbus-3.0.0.jar"
         jumboMode="true"
         revision="23.0.0"
         sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/eventbus-3.0.0_27f37ed28208c616db8609e65503359cdcc1fa61/classes.dex" />
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/eventbus-3.0.0_27f37ed28208c616db8609e65503359cdcc1fa61.jar" />
+    </item>
+    <item
+        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/de.greenrobot/greendao/2.0.0/5f49dd477c1621dfaf0f7fe5d755fe4f07526af2/greendao-2.0.0.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="5f49dd477c1621dfaf0f7fe5d755fe4f07526af2">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/greendao-2.0.0_0074ed9f38a797c28b31671106ee4218876fe3e0.jar" />
     </item>
     <item
         jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
         jumboMode="true"
         revision="23.0.0"
         sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.2.0_58c897cb6ba2d1f186be17b8f155e0df88523147/classes.dex" />
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/okhttp-3.2.0_58c897cb6ba2d1f186be17b8f155e0df88523147.jar" />
     </item>
     <item
         jar="/Users/admin/.gradle/caches/modules-2/files-2.1/io.realm/realm-android/0.86.0/e49a43bcbbc3d5e5491dd2f4d3799a504b618e6b/realm-android-0.86.0.jar"
         jumboMode="true"
         revision="23.0.0"
         sha1="e49a43bcbbc3d5e5491dd2f4d3799a504b618e6b">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/realm-android-0.86.0_6b0a8b85749de099e7bed027ef392ab13421a2ff/classes.dex" />
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/realm-android-0.86.0_6b0a8b85749de099e7bed027ef392ab13421a2ff.jar" />
+    </item>
+    <item
+        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/2.0.0-beta2/880d9e0997b2d1bfc98e0d121ced33ee5d04aac4/retrofit-2.0.0-beta2.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="880d9e0997b2d1bfc98e0d121ced33ee5d04aac4">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/retrofit-2.0.0-beta2_136c30f107495beb57e5c54c88062482be43c8a8.jar" />
+    </item>
+    <item
+        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.1.1_b9ab5c58e8fd37845150840b2337278016c8a363.jar" />
     </item>
     <item
         jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
         jumboMode="true"
         revision="23.0.0"
         sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-7.0.1_69b028994c1e25e4fd7118d2092dfdbfc4c51814/classes.dex" />
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_69b028994c1e25e4fd7118d2092dfdbfc4c51814.jar" />
+    </item>
+    <item
+        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.2.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="927e8ef5711b115b65b2f35495d77352be2b3c09">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.2.0_059c7bcb4226ab8284ab4cdef683f57f33a704f9.jar" />
+    </item>
+    <item
+        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/adapter-rxjava/2.0.0-beta2/3a233746381a03dbb0f5f3ed10b11c3e72dba499/adapter-rxjava-2.0.0-beta2.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="3a233746381a03dbb0f5f3ed10b11c3e72dba499">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.0.0-beta2_8f3fc03b6fe9dc0614dba80f14e7cb3c6caa7038.jar" />
+    </item>
+    <item
+        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_3f11028a4481d5d5734db82a945c4d9ecd7c85e1.jar" />
     </item>
     <item
         jar="/Users/admin/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
         jumboMode="true"
         revision="23.0.0"
         sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.1_25e72cbfa5665a2782c176f427948334fcbf5315/classes.dex" />
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_25e72cbfa5665a2782c176f427948334fcbf5315.jar" />
     </item>
     <item
         jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
         jumboMode="true"
         revision="23.0.0"
         sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.1_5960e179033262f022a391ee7d89c94c1180a59a/classes.dex" />
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_5960e179033262f022a391ee7d89c94c1180a59a.jar" />
+    </item>
+    <item
+        jar="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_5eecba5ca35caf4ab47b32fd838bd38a73358132.jar" />
+    </item>
+    <item
+        jar="/Users/admin/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.5.0/4de2b4ed3445c37ec1720a7d214712e845a24636/okhttp-2.5.0.jar"
+        jumboMode="true"
+        revision="23.0.0"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="/Users/admin/Desktop/PopularMoviesStage2/app/build/intermediates/pre-dexed/debug/okhttp-2.5.0_9e1c80bb9f87ef131fe885e6bac34a8a7f606887.jar" />
     </item>
 
 </items>
